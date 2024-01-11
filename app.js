@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 // cors - cross origin resource sharing
 app.use(cors({
-    origin:["https://todomern-cfo7.vercel.app/"],
+    origin:[process.env.FRONT_END],
     credentials:true
 }))
 // {
