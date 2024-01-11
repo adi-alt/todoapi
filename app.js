@@ -18,6 +18,8 @@ app.use(cors({
     origin:[process.env.FRONT_END],
     credentials:true
 }))
+
+
 // {
 //     origin:[process.env.FRONT_END],
 //     methods: ["GET","POST","PUT","DELETE"],
@@ -25,4 +27,11 @@ app.use(cors({
 // }
 app.use("/api/v1/users",userrouter)
 app.use("/api/v1/tasks",taskrouter)
+
+
+app.get("/", (req, res) => {
+    res.send("Nice working");
+  });
+
+
 app.use(errorhandle);
